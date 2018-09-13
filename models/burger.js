@@ -28,4 +28,4 @@ var burger = {
   
 
 // export this file
-module.exports = burger.js;
+module.exports = burger;

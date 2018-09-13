@@ -1,5 +1,6 @@
 // Import MySQL connection.
-var connection = require("../config/connection.js");
+// var connection = require("../config/connection.js");
+var connection = require("./connection.js");
 
 function printQuestionMarks(num) {
     var arr = [];
@@ -98,6 +99,6 @@ function printQuestionMarks(num) {
     }
   };
   
-  // Export the orm object for the model (cat.js).
-  module.exports = orm.js;
+  // Export the orm object.
+  module.exports = orm;
   
