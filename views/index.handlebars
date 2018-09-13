@@ -18,6 +18,7 @@
         {{!-- burgers have not been eaten, --}}
         {{!-- so the burgers should be listed --}}
         {{#each burgers}}
+        {{burger}}
             {{#unless eaten}}
                 {{> burger-block eaten=true}}
             {{/unless}}

@@ -1,9 +1,10 @@
-<li>
-	{{name}}
-
+<ul>
+	
+	<input type="text" name="BurgerName" value="{{burger_name}}">
 	<button class="devour-it" data-id="{{id}}" data-eaten="{{eaten}}">
-		{{#if eaten}}Devour It!{{else}}WAKE UP!{{/if}}
+		{{#if eaten}}Devour It!{{/if}}
 	</button>
-
-
-</li>
+	{{#unless eaten}}
+	<input type="text" name="delBurgerName" value="{{burger_name}}" disabled>
+	{{/unless}}
+</ul>
