@@ -1,7 +1,9 @@
 // Import MySQL connection.
-// var connection = require("../config/connection.js");
 var connection = require("./connection.js");
 
+
+//  This is used to created the "?'s" needed to build SQL
+//  statements.  They are called from the orm object.
 function printQuestionMarks(num) {
     var arr = [];
   
@@ -13,6 +15,7 @@ function printQuestionMarks(num) {
   }
   
   // Helper function to convert object key/value pairs to SQL syntax
+  // this is to create SQL statements including an "=" ie "name=Sam"
   function objToSql(ob) {
     var arr = [];
   
