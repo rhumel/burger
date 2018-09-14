@@ -18,10 +18,13 @@ router.get("/burgers", function(req, res) {
   });
 
 router.post("/api/burgers", function(req, res) {
+  console.log(req.body.name);
+  console.log(req.body.eaten);
+  console.log(req);
   burger.create([
     "burger_name", "devoured"
   ], [
-    req.body.name, req.body.eaten
+    req.body.burger_name, req.body.devoured
   ], function(result) {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
