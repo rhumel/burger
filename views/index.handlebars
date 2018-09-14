@@ -19,7 +19,7 @@
         {{!-- so the burgers should be listed --}}
         {{#each burgers}}
         {{burger}}
-            {{#unless eaten}}
+            {{#unless devoured}}
                 {{> burger-block devoured=false}}
             {{/unless}}
         {{/each}}        
@@ -28,8 +28,8 @@
 
     <ul>
         {{#each burgers}}
-            {{#if eaten}}
-            {{> burger-block eaten=true}}
+            {{#if devoured}}
+            {{> burger-block devoured=true}}
             {{/if}}
         {{/each}}
         </ul>

@@ -3,12 +3,14 @@ $(function() {
   $(".devour-it").on("click", function(event) {
       console.log("im in the devour part");
     var id = $(this).data("id");
-
+    justDevoured= {
+        devoured: true
+    };
 
     // Send the PUT request.
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
-      data:false
+      data: justDevoured
     }).then(
       function() {
         console.log("changed devoured to false");

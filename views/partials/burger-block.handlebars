@@ -1,10 +1,10 @@
 <ul>
-	
+	{{#unless devoured}}
 	<input type="text" name="BurgerName" value="{{burger_name}}">
 	<button class="devour-it" data-id="{{id}}" data-eaten="{{devoured}}">
-		{{#unless eaten}}Devour It!{{/unless}}
-	</button>
-	{{#if eaten}}
-	<input type="text" id="delBurgerName" value="" disabled>
+		Devour It!
+	</button>{{/unless}}
+	{{#if devoured}}
+	<input type="text" id="delBurgerName" value="{{burger_name}}" disabled>
 	{{/if}}
 </ul>
